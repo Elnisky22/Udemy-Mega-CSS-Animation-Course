@@ -1,1 +1,0 @@
-<script data-search-pseudo-elements type="text/javascript" src="js/all-libs.min.js"></script>

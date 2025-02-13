@@ -1,16 +1,21 @@
-<?php //include("gzip/gzipHTML.php"); ?>
 <!doctype html>
 <html lang="pt-br">
     <head>
-        <?php include("header_nocache.php"); ?>
-        <?php //include("header_cache.php"); ?>
-        <?php include("header.php"); ?>
+        <meta name="language" content="pt-br" />
+        <meta charset="UTF-8">
+
+        <link rel="preload prefetch" href="fonts/OpenSans-Regular.woff" as="font" type="font/woff" crossorigin="anonymous"/>
+        <link rel="preload prefetch" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+        <link rel="preload prefetch" href="fonts/OpenSans-Bold.woff" as="font" type="font/woff" crossorigin="anonymous"/>
+        <link rel="preload prefetch" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+
+        <link rel="stylesheet" type="text/css" href="./libs/bootstrap-5.3.3-dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="./css/estilo.min.css"/>
-        <title><?=$titulo?></title>
+        <title>Hover Effects - Mega CSS Animation Course</title>
     </head>
 
     <body>
-        <?php include("topo.php"); ?>
+        <header id="header"></header>
         <main id="inicial" tabindex="-1">
             <div class="container">
                 <div class="element element-1">
@@ -56,9 +61,10 @@
                         <img src="https://picsum.photos/603" class="img-cover" alt="Elemento 03">
                     </div>
                     <div class="element-back">
-                        <?php for($i=0;$i<4;$i++) { ?>
-                            <div class="bar" aria-hidden="true"></div>
-                        <?php } ?>
+                        <div class="bar" aria-hidden="true"></div>
+                        <div class="bar" aria-hidden="true"></div>
+                        <div class="bar" aria-hidden="true"></div>
+                        <div class="bar" aria-hidden="true"></div>
                         <img src="https://picsum.photos/603" class="img-cover" alt="Elemento 03">
                         <div class="element-back--container">
                             <h2 class="element-back--title">This is a Title</h2>
@@ -94,8 +100,8 @@
                 </div>
             </div>
         </main>
-        <?php include("rodape.php"); ?>
-        <?php include("scripts.php"); ?>
+        <footer id="footer"></footer>
+        <script data-search-pseudo-elements type="text/javascript" src="js/all-libs.min.js"></script>
         <script type="text/javascript" src="./js/init.min.js"></script>
     </body>
 </html>
