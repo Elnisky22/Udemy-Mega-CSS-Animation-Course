@@ -357,3 +357,10 @@ main {
         }
     }
 }
+
+@include media-down(sm) {
+    .element {
+        height: 300px;
+        margin: 50px 40px;
+    }
+}
