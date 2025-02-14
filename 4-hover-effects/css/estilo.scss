@@ -135,15 +135,18 @@ main {
         &--title {
             font-size: 24px;
             font-weight: bold;
+            transition: all .3s ease;
         }
         &--desc {
             margin: 20px 0;
+            transition: all .3s ease;
         }
         &--icons {
             align-items: center;
             display: flex;
             font-size: 22px;
             justify-content: center;
+            transition: all .3s ease;
             li {
                 &:not(:last-child) {
                     margin-right: 10px;
@@ -337,7 +340,7 @@ main {
         .element {
             &-front {
                 opacity: 0;
-                transform: rotate(720deg);
+                transform: rotate(-720deg);
                 left: -100%;
             }
             &-back {
@@ -352,6 +355,254 @@ main {
                 &:after {
                     left: 75px;
                     right: 75px;
+                }
+            }
+        }
+    }
+}
+
+//--Element 05--//
+
+.element-5 {
+    overflow: hidden;
+    .element {
+        &-front {
+            opacity: 1;
+            transform: skewX(0deg);
+            transition: transform .5s ease, opacity .5s ease .3s, left .5s ease .3s;
+        }
+        &-back {
+            &--container {
+                opacity: 0;
+                transition-delay: .3s;
+                transform: scale(0);
+            }
+        }
+    }
+    &:hover {
+        .element {
+            &-front {
+                transform: skewX(-25deg);
+                left: -100%;
+                opacity: 0;
+            }
+            &-back {
+                &--container {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+
+//--Element 06--//
+
+.element-6 {
+    .element {
+        &-back {
+            &--container {
+                transition-delay: .1s;
+            }
+        }
+    }
+    &:hover {
+        .element {
+            &-front {
+                box-shadow: 0 0 0 15px #fff, 0 0 75px #fff;
+                transform: scale(.35);
+                top: 25%;
+            }
+            &-back {
+                &--container {
+                    transform: translateY(-60px);
+                }
+            }
+        }
+    }
+}
+
+//--Element 07--//
+
+.element-7 {
+    overflow: hidden;
+    .element {
+        &-front {
+            transition-duration: .3s;
+        }
+        &-back {
+            background: linear-gradient(to bottom right, green, yellow);
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            &--title {
+                transition-delay: .1s;
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            &--desc {
+                opacity: 0;
+            }
+            &--icons {
+                transition-delay: .1s;
+                transform: translateY(20px);
+                opacity: 0;
+            }
+        }
+    }
+    &:hover {
+        .element {
+            &-front {                
+                top: 50%;
+                // transform: rotateX(720deg);
+                height: 0;
+                opacity: 0;
+            }
+            &-back {
+                &--title, &--icons {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                &--desc {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+//--Element 08--//
+
+.element-8 {
+    .element {
+        &-front {
+            transform: rotateY(359.9deg);
+            transform-origin: left;
+            transition-duration: .6s;
+        }
+        &-back {
+            &--title, &--desc, &--icons {
+                transform: translateX(30px);
+                opacity: 0;
+            }
+            &--desc {
+                transition-delay: .1s;
+            }
+            &--icons {
+                transition-delay: .2s;
+            }
+        }
+    }
+    &:hover {
+        .element {
+            &-front {                
+                transform: perspective(800px) rotateY(180deg);
+            }
+            &-back {
+                &--title, &--icons, &--desc {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+}
+
+//--Element 09--//
+
+.element-9 {
+    overflow: hidden;
+    .element {
+        &-front {
+            transition-duration: .5s;
+        }
+        &-back {
+            &:before, &:after {
+                position: absolute;
+                content: '';
+                height: 0;
+                width: 0;
+                pointer-events: none;
+                opacity: 0;
+                transition: all .6s ease .2s;
+            }
+            &:before {
+                top: 30px;
+                right: 30px;
+                border-top: 3px solid #fff;
+                border-right: 3px solid #fff;
+            }
+            &:after {
+                bottom: 30px;
+                left: 30px;
+                border-bottom: 3px solid #fff;
+                border-left: 3px solid #fff;
+            }
+            &--container {
+                opacity: 0;
+                transform: translate(-100px,-100px);
+            }
+        }
+    }
+    &:hover {
+        .element {
+            &-front {                
+                top: 100%;
+                left: 100%;
+                opacity: 0;
+            }
+            &-back {
+                &:before, &:after {
+                    height: calc(50% - 30px);
+                    width: calc(50% - 30px);
+                    opacity: 1;
+                }
+                &--container {
+                    opacity: 1;
+                    transform: translate(0,0);
+                }
+            }
+        }
+    }
+}
+
+//--Element 10--//
+
+.element-10 {
+    overflow: hidden;
+    .element {
+        &-front {
+            transition-duration: .5s;
+        }
+        &-back {
+            border: none;
+            border-radius: 0 0 50% 50%;
+            opacity: 0;
+            top: -110%;
+            &--title, &--desc, &--icons {
+                opacity: 0;
+                transform: translateY(-30px);
+                transition-delay: .2s;
+            }
+            &--desc {
+                transition-delay: .4s;
+            }
+            &--icons {
+                transition-delay: .6s;
+            }
+        }
+    }
+    &:hover {
+        .element {
+            &-front {                
+                top: 100%;
+                opacity: 0;
+            }
+            &-back {
+                top: 0;
+                opacity: 1;
+                &--title, &--desc, &--icons {
+                    opacity: 1;
+                    transform: translateY(0);
                 }
             }
         }
